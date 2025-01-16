@@ -1,0 +1,85 @@
+<style> body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    svg {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 100px;
+      text-align: center;
+    }
+
+    .text {
+      fill: transparent;
+      stroke: black;
+      stroke-width: 1px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .sparkles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: gold;
+      border-radius: 50%;
+      opacity: 0;
+      animation: sparkleAnim 1.5s infinite ease-in-out;
+    }
+
+    @keyframes sparkleAnim {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+</style>
+
+<!-- SVG with Text -->
+    <svg width="500" height="150" viewBox="0 0 500 150">
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="text">DESIGNER</text>
+    </svg>
+
+    <!-- Sparkles -->
+
+    <div class="sparkles">
+      <div class="sparkle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+      <div class="sparkle" style="top: 30%; left: 60%; animation-delay: 0.2s;"></div>
+      <div class="sparkle" style="top: 40%; left: 80%; animation-delay: 0.4s;"></div>
+      <div class="sparkle" style="top: 60%; left: 20%; animation-delay: 0.6s;"></div>
+      <div class="sparkle" style="top: 70%; left: 50%; animation-delay: 0.8s;"></div>
+    </div>
