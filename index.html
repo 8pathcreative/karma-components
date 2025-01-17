@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="en">
-
 <head>
+  <!-- Character Set and Viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
   <meta name="description" content="Pixel to REM Converter - Instantly convert px to rem for responsive web design. Created by Neil Humphrey - User Experience and Product Designer.">
-  <meta name="keywords" content="px to rem converter, pixel to rem, rem calculator, CSS, responsive design, web development">
-  <meta name="author" content="Your Name">
-  <meta name="robots" content="index, follow"> <!-- Ensure search engines index the page and follow links -->
+  <meta name="author" content="Neil Humphrey">
+  <meta name="robots" content="index, follow">
 
-<!-- SEO Meta Tags -->
-<title>Karma Components - Modern, Scalable Web Components</title>
-<meta name="description" content="Explore Karma Components – a library of modern, scalable web components designed for fast, responsive, and accessible websites.">
+  <!-- Open Graph Meta Tags (for Social Media) -->
+  <meta property="og:title" content="Karma Components - PX to REM Converter">
+  <meta property="og:description" content="Explore Karma Components – a library of modern, scalable web components designed for fast, responsive, and accessible websites. Instantly convert px to rem for responsive design.">
+  <meta property="og:url" content="https://8pathcreative.github.io/karma-components/">
+  <meta property="og:image" content="https://8pathcreative.github.io/karma-components/preview-image.jpg">
+  <meta property="og:type" content="website">
 
-<!-- Keywords Meta Tag -->
-<meta name="keywords" content="Karma Components, web components, UI components, responsive design, scalable components, accessible components, modern web development">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karma Components - PX to REM Converter">
+  <meta name="twitter:description" content="Explore Karma Components – a library of modern, scalable web components designed for fast, responsive and accessible websites.">
+  <meta name="twitter:image" content="https://8pathcreative.github.io/karma-components/preview-image.jpg">
 
-<!-- Author -->
-<meta name="author" content="8path Creative">
-
-<!-- Open Graph Meta Tags (for Social Media) -->
-<meta property="og:title" content="Karma Components - Modern, Scalable Web Components">
-<meta property="og:description" content="Explore Karma Components – a library of modern, scalable web components designed for fast, responsive, and accessible websites.">
-<meta property="og:url" content="https://8pathcreative.github.io/karma-components/">
-<meta property="og:image" content="https://8pathcreative.github.io/karma-components/preview-image.jpg"> <!-- Add a preview image -->
-<meta property="og:type" content="website">
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Karma Components - Modern, Scalable Web Components">
-<meta name="twitter:description" content="Explore Karma Components – a library of modern, scalable web components designed for fast, responsive, and accessible websites.">
-<meta name="twitter:image" content="https://8pathcreative.github.io/karma-components/preview-image.jpg"> <!-- Same as OG image -->
+  <!-- Page Title -->
   <title>Karma Components - PX to REM Converter</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body style="min-height:100vh;width=100%">
-  <main class="container" style="margin-right:auto;margin-left:auto; max-width:64rem;">
-    <h1>Karma Components - PX to REM Converter</h1>
-    <p style="text-wrap:pretty;">Instantly convert pixels (px) to rem units for responsive web design!</p>
+<body style="min-height: 100vh; width: 100%;">
 
-    <!-- Input fields -->
+  <!-- Main Content -->
+  <main class="container" style="margin: 0 auto; max-width: 64rem;">
+    <h1>Karma Components - PX to REM Converter</h1>
+    <p style="word-wrap: break-word;">Instantly convert pixels (px) to rem units for responsive web design!</p>
+
+    <!-- Input Fields -->
     <div class="converter">
       <label for="pxInput">Pixels (px):</label>
       <input type="number" id="pxInput" placeholder="Enter px value..." />
@@ -48,7 +44,7 @@
       <label for="rootFontSize">Root Font Size (px):</label>
       <input type="number" id="rootFontSize" value="16" />
 
-      <!-- Result -->
+      <!-- Conversion Result -->
       <div class="result">
         <p>REM Value:</p>
         <h2 id="remResult">0 rem</h2>
@@ -56,10 +52,17 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>Made with ❤️ by <a href="https://www.neilhumphrey.design/" target="_blank" rel="index,follow">Neil Humphrey - UX & Product Designer</a></p>
+    <p>
+      Made with ❤️ by
+      <a href="https://www.neilhumphrey.design/" target="_blank" rel="index, follow">
+        Neil Humphrey - UX & Product Designer
+      </a>
+    </p>
   </footer>
 
-  <script defer="script.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
 </body>
 </html>
