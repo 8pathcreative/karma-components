@@ -9,6 +9,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  overflow:hidden;
   font-size: 1rem;
   line-height: 1.5;
   padding: 3rem;
@@ -18,74 +19,6 @@ body {
   background-color: #f9f9f9;
   padding: 2rem;
   -webkit-font-smoothing: antialiased; /* Improve font rendering in WebKit */
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  background-color: #fff;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 1rem 0;
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
 }
 
 .container {
@@ -105,7 +38,7 @@ body {
 
 h1 {
   font-family: Fira Code,Operator Mono,Consolas,Monaco,Andale Mono,monospace, sans-serif;
-  font-size: 3.875rem; /* 32px / 16 */
+  font-size: 3rem; /* 32px / 16 */
   margin-bottom: 1.375rem; /* 10px / 16 */
   color: #0077cc;
 }
