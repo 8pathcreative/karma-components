@@ -28,6 +28,27 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Function to load CSS asynchronously
+    function loadCSS(href, callback) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+
+      // Listen for the 'load' event to trigger the callback
+      link.onload = function() {
+        if (typeof callback === "function") callback();
+      };
+
+      // Append the link to the document head
+      document.head.appendChild(link);
+    }
+
+    // Load your styles.css asynchronously
+    loadCSS("styles.css", function() {
+      console.log("CSS file has been loaded asynchronously.");
+    });
+  </script>
 </head>
 <body style="min-height: 100vh; width: 100%;">
 
