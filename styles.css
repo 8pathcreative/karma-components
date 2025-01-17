@@ -102,3 +102,57 @@ footer {
   color: #777;
   -webkit-text-size-adjust: 100%; /* Ensures proper text sizing in WebKit browsers */
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .converter {
+    gap: 1rem;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  .result {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  p {
+    font-size: 1rem; /* 16px */
+  }
+
+  .converter {
+    gap: 0.75rem;
+  }
+
+  input {
+    padding: 0.5rem; /* 8px */
+  }
+
+  .result {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
