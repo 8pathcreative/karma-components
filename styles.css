@@ -108,6 +108,67 @@ footer {
       max-width: 600px;
       margin: 0 auto;
     }
+
+extarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+#preview {
+    width: 1200px;
+    height: 630px;
+    background-color: #4a90e2;
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#ogText {
+    max-width: 80%;
+    text-align: center;
+}
+
+#ogTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#ogDescription {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+#downloadBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #57a957;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#downloadBtn:hover {
+    background-color: #428942;
+}
   
 /* Responsive Media Queries */
 @media (max-width: 768px) {
