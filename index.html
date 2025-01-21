@@ -78,6 +78,42 @@
         <h2 id="remResult">0 rem</h2>
       </div>
     </div>
+
+    <!-- New CALC CONVERTER  -->
+
+    .container-new {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    label, p {
+      font-size: 1rem;
+    }
+    input {
+      padding: 8px;
+      font-size: 1rem;
+      width: 100%;
+      margin: 10px 0;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 1rem;
+      background: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    
+ <div class="container-new">
+    <h2>Responsive Font Calculator</h2>
+    <label for="pixelValue">Enter Font Size in Pixels:</label>
+    <input type="number" id="pixelValue" placeholder="Enter a pixel value (e.g., 24)" />
+    <div class="output">
+      <p>Responsive calc() Value:</p>
+      <p id="calcValue">Enter a pixel value to see the result</p>
+    </div>
+  </div>
+
+
+    
   </main>
 
   <!-- Footer -->
@@ -92,5 +128,31 @@
 
   <!-- JavaScript -->
   <script src="script.js" defer></script>
+  <script>
+    function pxToResponsiveRem(pxValue, minScreen = 320, maxScreen = 1920) {
+      const baseFontSize = 16; // Default root font-size in pixels
+      const remValue = pxValue / baseFontSize;
+
+      // Calculate the responsive slope
+      const slope = (pxValue / maxScreen - pxValue / minScreen) / (maxScreen - minScreen);
+
+      // Calculate the intercept for the calc() formula
+      const intercept = remValue - slope * minScreen;
+
+      return `calc(${intercept.toFixed(4)}rem + ${(slope * 100).toFixed(4)}vw)`;
+    }
+
+    const pixelInput = document.getElementById('pixelValue');
+    const calcValueDisplay = document.getElementById('calcValue');
+
+    pixelInput.addEventListener('input', () => {
+      const pxValue = parseFloat(pixelInput.value);
+      if (!isNaN(pxValue)) {
+        calcValueDisplay.textContent = pxToResponsiveRem(pxValue);
+      } else {
+        calcValueDisplay.textContent = 'Enter a valid pixel value.';
+      }
+    });
+  </script>
 </body>
 </html>
