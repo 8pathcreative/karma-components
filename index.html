@@ -93,7 +93,36 @@
     </div>
   </div>
 
+<!-- OPEN GRAPH GENERATOR -->
 
+    <div class="container">
+        <h1>Create Open Graph Image</h1>
+        <form id="ogForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required placeholder="Enter title (max 50 chars)">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required placeholder="Enter description (max 200 chars)"></textarea>
+
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" name="bgColor" value="#4a90e2">
+
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" name="fontColor" value="#ffffff">
+
+            <button type="submit">Generate Image</button>
+        </form>
+
+        <h2>Preview:</h2>
+        <div id="preview" class="og-image">
+            <div id="ogText">
+                <h3 id="ogTitle">Your Title</h3>
+                <p id="ogDescription">Your description here.</p>
+            </div>
+        </div>
+
+        <button id="downloadBtn" style="display:none;">Download Image</button>
+    </div>
     
   </main>
 
