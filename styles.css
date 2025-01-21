@@ -104,6 +104,11 @@ footer {
   -webkit-text-size-adjust: 100%; /* Ensures proper text sizing in WebKit browsers */
 }
 
+.container-new {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   body {
